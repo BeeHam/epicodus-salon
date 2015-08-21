@@ -27,4 +27,8 @@ class Client
     self.name().==(other.name()).&(self.stylist_id().==(other.stylist_id()))
   end
 
+  define_singleton_method(:clear) do
+    DB.exec("DELETE FROM clients *;")
+  end
+
 end

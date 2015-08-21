@@ -38,4 +38,12 @@ describe(Client) do
     end
   end
 
+  describe(".clear") do
+    it("empties out all of the saved clients") do
+      Client.new({:name => "Sue", :stylist_id => 1, :id => nil})
+      Client.clear()
+      expect(Client.all()).to(eq([]))
+    end
+  end
+
 end
