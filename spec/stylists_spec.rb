@@ -15,4 +15,12 @@ describe(Stylist) do
       expect(stylist.id()).to(be_an_instance_of(Fixnum))
     end
   end
+  
+  describe('#save') do
+    it("lets you save astylist to the database") do
+      stylist = Stylist.new({:name =>  "Jane", :id => nil})
+      stylist.save()
+      expect(Stylist.all()).to(eq([list]))
+    end
+  end
 end
