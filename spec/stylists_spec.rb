@@ -7,4 +7,12 @@ describe(Stylist) do
       expect(stylist.name()).to(eq("Jane"))
     end
   end
+
+  describe('#id') do
+    it('will set the id of a stylist') do
+      stylist = Stylist.new({:name => "Jane", :id => nil})
+      stylist.save()
+      expect(stylist.id()).to(be_an_instance_of(Fixnum))
+    end
+  end
 end
