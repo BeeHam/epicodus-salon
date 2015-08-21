@@ -10,4 +10,15 @@ class Stylist
     result = DB.exec("INSERT INTO stylists (name) VALUES ('#{@name}') RETURNING id;")
     @id = result.first().fetch("id").to_i()
   end
+
+  define_singleton_method(:all) do
+    retrieved_stylists = DB.exec("SELECT * FROM stylists;")
+    stylists = []
+    retrieved_stylists.each() do |stylist|
+      name = stylist.fetch("name")
+      id = stylist.fetch("id").to_i()
+      stylists.push(Stylist.new({:name => name, :id => id}))
+    end
+    stylists
+  end
 end
