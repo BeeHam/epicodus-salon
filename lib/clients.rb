@@ -23,4 +23,8 @@ class Client
     DB.exec("INSERT INTO clients (name, stylist_id) VALUES ('#{@name}', #{@stylist_id});")
   end
 
+  define_method(:==) do |other|
+    self.name().==(other.name()).&(self.stylist_id().==(other.stylist_id()))
+  end
+
 end

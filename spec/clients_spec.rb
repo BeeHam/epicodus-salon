@@ -30,4 +30,12 @@ describe(Client) do
     end
   end
 
+  describe('#==') do
+    it('is the same client if they have the same name') do
+      client1 = Client.new({:name => 'Sue', :stylist_id => 1, :id => nil})
+      client2 = Client.new({:name => 'Sue', :stylist_id => 1, :id => nil})
+      expect(client1).to(eq(client2))
+    end
+  end
+
 end
