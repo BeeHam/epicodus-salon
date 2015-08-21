@@ -1,12 +1,14 @@
-# _{Application Name}_
+# Salon Database
 
-##### _{Brief description of application}, {Date of current version}_
+_I was unable to get the delete & update methods for the ClientClass to function. I just don't feel that I_
 
-#### By _**{List of contributors}**_
+##### _{Epicodus Database Basics Friday Code Review}, {08/21/2015}_
+
+#### By _**{Brigham Thompson}**_
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. Do you want other developers to use this code in their apps? Talk about things like that here in simple terms.}_
+_{This web application will provide the user with the ability to create and update a database of stylists and their respective clients.}_
 
 ## Setup
 
@@ -16,17 +18,20 @@ _{This is a detailed description of your application. Give as much detail as nee
 *CREATE TABLE clients (id serial PRIMARY KEY, name varchar, stylist_id int);
 *CREATE DATABASE hair_salon_test WITH TEMPLATE hair_salon;
 
-_{Leave nothing to chance! You want it to be easy for potential employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Are there other applications this app depends on?}_
+**Clone git repository at: **
 
 ## Technologies Used
 
-_{Tell me about the languages you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+*Ruby
+*RSpec
+*Capybara
+*Sinatra
+*PostgreSQL
 
 ### Legal
 
-*{This is boilerplate legal language. Read through it, and if you like it, use it. There are other license agreements online, but you can generally copy and paste this.}*
 
-Copyright (c) 2015 **_{List of contribtors}_**
+Copyright (c) 2015 **_{Brigham Thompson}_**
 
 This software is licensed under the MIT license.
 

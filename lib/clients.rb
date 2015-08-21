@@ -20,7 +20,7 @@ class Client
   end
 
   define_method(:save) do
-    DB.exec("INSERT INTO clients (name, stylist_id) VALUES ('#{@name}', #{@stylist_id});")
+    DB.exec("INSERT INTO clients (name, stylist_id) VALUES ('#{@name}', #{@stylist_id}) RETURNING id;")
   end
 
   define_method(:==) do |other|
@@ -37,5 +37,9 @@ class Client
   #   @id = self.id()
   #   DB.exec("UPDATE clients SET name = '#{@name}', stylist_id = #{@stylist_id} WHERE id = #{@id};")
   # end
+
+  define_method(:delete) do
+    DB.exec("DELETE FROM clients WHERE id = #{self.id().to_i()};")
+  end
 
 end
