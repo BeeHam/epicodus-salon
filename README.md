@@ -1,37 +1,37 @@
 # Salon Database
 
-_I was unable to get the delete & update methods for the ClientClass to function. I just don't feel that I_
+_I was unable to get the delete & update methods for the ClientClass to function. I just don't feel that I am fully grasping the concepts._
 
-##### _{Epicodus Database Basics Friday Code Review}, {08/21/2015}_
+##### Epicodus Database Basics Friday Code Review, 08/21/2015
 
-#### By _**{Brigham Thompson}**_
+#### By _**Brigham Thompson**_
 
 ## Description
 
-_{This web application will provide the user with the ability to create and update a database of stylists and their respective clients.}_
+_This web application will provide the user with the ability to create and update a database of stylists and their respective clients._
 
 ## Setup
 
 #### Database and Table set-up
-*CREATE DATABASE hair_salon;
-*CREATE TABLE stylists (id serial PRIMARY KEY, name varchar);
-*CREATE TABLE clients (id serial PRIMARY KEY, name varchar, stylist_id int);
-*CREATE DATABASE hair_salon_test WITH TEMPLATE hair_salon;
+-CREATE DATABASE hair_salon;
+-CREATE TABLE stylists (id serial PRIMARY KEY, name varchar);
+-CREATE TABLE clients (id serial PRIMARY KEY, name varchar, stylist_id int);
+-CREATE DATABASE hair_salon_test WITH TEMPLATE hair_salon;
 
-**Clone git repository at: **
+Clone git repository at: https://github.com/BeeHam/epicodus-salon.git
 
 ## Technologies Used
 
-*Ruby
-*RSpec
-*Capybara
-*Sinatra
-*PostgreSQL
+-Ruby
+-RSpec
+-Capybara
+-Sinatra
+-PostgreSQL
 
 ### Legal
 
 
-Copyright (c) 2015 **_{Brigham Thompson}_**
+Copyright (c) 2015 **_Brigham Thompson_**
 
 This software is licensed under the MIT license.
 
